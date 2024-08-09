@@ -1,0 +1,24 @@
+  
+CREATE TABLE Customers (
+	id INT PRIMARY KEY,
+	first_name VARCHAR (100),
+	last_name VARCHAR (100),  
+	age INT);
+
+INSERT INTO Customers (id, first_name, last_name, age)
+	Values ('1', 'Mishel', 'Henry', '25');
+    
+UPDATE Customers SET first_name = "James",  last_name = "Henryy" WHERE id = "1";
+DELETE FROM Customers WHERE id = "1"
+SELECT last_name FROM Customers
+
+INSERT INTO Customers (id, first_name, last_name, age)
+	Values ('1', 'Jim', 'Hendrix', '25');
+
+SELECT first_name FROM Customers WHERE id = "2"
+
+UPDATE Customers SET first_name = "Roselyn", last_name = "Alvarez" WHERE id = "1"
+
+UPDATE Customers SET first_name = "Michael", last_name = "Kile";
+
+DROP TABLE Customers
