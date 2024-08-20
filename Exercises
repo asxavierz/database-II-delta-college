@@ -22,3 +22,54 @@ UPDATE Customers SET first_name = "Roselyn", last_name = "Alvarez" WHERE id = "1
 UPDATE Customers SET first_name = "Michael", last_name = "Kile";
 
 DROP TABLE Customers
+
+
+
+
+
+1. Find the Average Price of Available Products
+Goal: Calculate the average price of all products that are currently available
+
+Create Table Products (
+	ID serial PRIMARY KEY,
+	product_name VARCHAR(100) NOT NULL, 
+	description TEXT,
+	price NUMERIC(10, 2) NOT NULL,
+	inserted_at DATE,
+	is_available BOOLEAN);
+    
+--------------------------------------------------------------------------------------------------------
+
+1. Find the Average Price of Available Products
+Goal: Calculate the average price of all products that are currently available
+
+SELECT AVG(Price) FROM Products;
+
+--------------------------------------------------------------------------------------------------------
+
+2. Identify the Most Expensive and Least Expensive Products  
+Goal: Find the maximum and minimum prices of products, and display the corresponding product names.
+
+SELECT MIN (Price) FROM Products;
+SELECT MAX (Price) FROM Products;
+
+---------------------------------------------------------------------------------------------------------
+
+3.  Count the Number of Products Inserted in the Last 30 Days  
+Goal: Count how many products have been inserted in the last 30 days from todays date.
+
+SELECT COUNT(Price) FROM Products;
+
+---------------------------------------------------------------------------------------------------------
+
+4. Sum the Prices of Products That Fall Within a Specific Price Range  
+Goal: Calculate the total price of products that have a price between 50 and 200.
+
+SELECT SUM(Price) FROM Products WHERE Price BETWEEN 50 and 200;
+
+---------------------------------------------------------------------------------------------------------
+
+5.  List Products with Specific Characteristics Using SQL Operators  
+Goal: Retrieve the names of products that are available, priced above 100, and do not contain the word "Basic" in their name.
+
+SELECT ProductName FROM Products WHERE Price > 0 AND Price > 100 AND ProductName NOT LIKE '%Basic%';
