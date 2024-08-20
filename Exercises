@@ -1,4 +1,4 @@
-  
+14/08/2024
 CREATE TABLE Customers (
 	id INT PRIMARY KEY,
 	first_name VARCHAR (100),
@@ -26,7 +26,7 @@ DROP TABLE Customers
 
 
 
-
+21/08/2024
 1. Find the Average Price of Available Products
 Goal: Calculate the average price of all products that are currently available
 
