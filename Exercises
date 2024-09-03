@@ -108,3 +108,13 @@ UPDATE Products SET Unit = '20 - 500 g pkgs.' WHERE ProductName = 'Mishi Kobe Ni
 
 SELECT Categories.*, Products.* FROM Categories LEFT JOIN Products ON Categories.CategoryID = Products.CategoryID;
 
+---------------------------------------------------------------------------------------------------------
+
+04/09/24
+SELECT u.product_id, ROUND(SUM(p.price * u.units) / SUM(u.units), 2) AS average_price
+FROM UnitsSold u
+INNER JOIN Prices p ON u.product_id = p.product_id
+AND u.purchase_date BETWEEN p.start_date AND p.end_date
+GROUP BY u.product_id;
+
+SELECT * FROM Cinema WHERE ((id % 2) <> 0)and (description <>"boring") ORDER BY rating desc;
